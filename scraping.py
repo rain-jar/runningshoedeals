@@ -16,7 +16,7 @@ def clear_table():
     cursor.execute("TRUNCATE TABLE running_shoe_deals RESTART IDENTITY")
     connection.commit()
 
-def scrape_running_shoes():
+def runfree_scraper():
     with sync_playwright() as p: 
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
@@ -87,7 +87,7 @@ def scrape_running_shoes():
 
 if __name__ == "__main__" : 
     clear_table()
-    scrape_running_shoes()
+    runfree_scraper()
 
 
 # Close database connection
