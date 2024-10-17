@@ -84,6 +84,7 @@ def runfree_scraper():
         browser.close()
         return
     
+    
 
 if __name__ == "__main__" : 
     clear_table()
